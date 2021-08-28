@@ -1,1 +1,1 @@
-# dotconf
+# .conf files
