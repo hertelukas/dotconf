@@ -232,7 +232,7 @@ mode "$mode_system" {
 bindsym $mod+Escape mode "$mode_system"
 
 #Keyboard Layout
-exec --no-startup-id "setxkbmap -layout 'us,de' -variant ',qwerty' -option 'grp:alt_shift_toggle'"
+exec_always --no-startup-id "setxkbmap -layout 'us,de' -variant ',qwerty' -option 'grp:alt_shift_toggle'"
 
 #Turn on numlock
 exec --no-startup-id numlockx on
