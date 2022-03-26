@@ -238,7 +238,7 @@ exec_always --no-startup-id "setxkbmap -layout 'us,de' -variant ',qwerty' -optio
 exec --no-startup-id numlockx on
 
 #Setup Monitor Layout
-exec --no-startup-id "xrandr --output HDMI-0 --auto --left-of DP-0"
+exec --no-startup-id "xrandr --output HDMI-0 --auto --left-of DP-0 --primary"
 exec --no-startup-id "echo 'on' > /home/lukas/LocalDocuments/Scripts/screen-state.txt"
 
 #Start Syncthing
