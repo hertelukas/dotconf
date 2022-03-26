@@ -245,7 +245,7 @@ exec --no-startup-id "echo 'on' > /home/lukas/LocalDocuments/Scripts/screen-stat
 exec --no-startup-id syncthing -no-browser
 
 #Set Background
-exec --no-startup-id feh --bg-fill Downloads/F34_default_wallpaper_day.jpg
+exec_always --no-startup-id feh --bg-fill ~/.config/i3/f26.png
 
 #Setup workspaces
 assign [class="discord"] $ws2
