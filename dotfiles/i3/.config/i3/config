@@ -242,9 +242,6 @@ exec --no-startup-id "xrandr --output HDMI-0 --auto --right-of DP-0"
 exec --no-startup-id "xrandr --output DP-0 --primary"
 exec --no-startup-id "echo 'on' > /home/lukas/LocalDocuments/Scripts/screen-state.txt"
 
-#Start Syncthing
-exec --no-startup-id syncthing -no-browser
-
 #Set Background
 exec_always --no-startup-id feh --bg-fill ~/.config/i3/f26.png
 
