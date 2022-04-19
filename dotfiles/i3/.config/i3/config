@@ -177,26 +177,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {        
-        colors {
-        background #282828
-        statusline #928374
-        separator #ebdbb2
-
-		# colour of border, background, and text
-        focused_workspace	#7c6f64	#3c3836	#ebdbb2
-        active_workspace	#3c3836	#282828	#ebdbb2
-        inactive_workspace	#3c3836	#282828	#ebdbb2
-        urgent_workspace	#ebdbb2	#7c6f64	#ebdbb2
-     }
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
-        # status_command i3status
-	position bottom
-    font xft:Noto, FontAwesome Sans 11
-}
-
 #Style
 # colour of border, background, text, indicator, and child_border
 client.focused          #282828             #282828            #ebdbb2    #FFFF00
@@ -214,7 +194,7 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+p exec /home/lukas/LocalDocuments/Scripts/change-screen.sh
 
 #Lock Screen
-set $Locker i3lock -c 36454f && sleep 1 && xset dpms force off
+set $Locker i3lock -ec 282828 && sleep 1 && xset dpms force off
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -230,6 +210,9 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 bindsym $mod+Escape mode "$mode_system"
+
+#Use polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 #Keyboard Layout
 exec_always --no-startup-id "setxkbmap -layout 'us,de' -variant ',qwerty' -option 'grp:alt_shift_toggle'"
@@ -248,3 +231,14 @@ exec_always --no-startup-id feh --bg-fill ~/.config/i3/f26.png
 #Setup workspaces
 assign [class="discord"] $ws2
 for_window [class="Spotify"] move to workspace  $ws2
+
+workspace $ws2 output HDMI-0
+workspace $ws4 output HDMI-0
+workspace $ws6 output HDMI-0
+workspace $ws8 output HDMI-0
+workspace $ws10 output HDMI-0
+workspace $ws1 output DP-0
+workspace $ws3 output DP-0
+workspace $ws5 output DP-0
+workspace $ws7 output DP-0
+workspace $ws9 output DP-0
