@@ -45,14 +45,6 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
-  -- Markdwon Preview
-  use {
-    "iamcco/markdown-preview.nvim",
-    run = "cd app && npm install",
-    setup = function() vim.g.mkdp_filetypes = {"markdown"} end,
-    ft = { "markdown"}
-  }
-
   -- Gruvbox colorscheme
   use "morhetz/gruvbox"
 
