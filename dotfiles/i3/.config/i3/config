@@ -237,6 +237,12 @@ exec_always --no-startup-id feh --bg-fill ~/.config/i3/f26.png
 #Start picom for background blur
 exec --no-startup-id picom -b --experimental-backend --config ~/.config/picom/picom.conf
 
+#Setup gaps
+for_window [class=".*"] border pixel 4
+gaps inner 7
+smart_borders on
+#smart_gaps on
+
 #Setup workspaces
 assign [class="discord"] $ws2
 for_window [class="Thunderbird"] move to workspace $ws9
