@@ -223,6 +223,9 @@ exec_always --no-startup-id "setxkbmap -layout 'us,de' -variant ',qwerty' -optio
 #Turn on numlock
 exec --no-startup-id numlockx on
 
+#Start discord 
+exec "flatpak run com.discordapp.Discord"
+
 #Start up dunst
 exec_always --no-startup-id dunst
 
